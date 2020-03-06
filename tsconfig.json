@@ -1,0 +1,33 @@
+/* eslint-env node */
+{
+  "transpileOnly": true,
+  "exclude": [
+      "./node_modules/*",
+      "./web_modules/*"
+  ],
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "target": "es2020",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "/web_modules/*.js": [
+        "node_modules/@types/*",
+        "node_modules/*",
+        "web_modules/*.js"
+      ]
+    },
+    "lib": [
+      "es6",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "types": [
+      "@pyoner/svelte-types"
+    ]
+  }
+}
